@@ -1,33 +1,31 @@
-// Fibonacci.cpp : Este arquivo contém a função 'main'. A execução do programa começa e termina ali.
+// Aula28.cpp : Este arquivo contém a função 'main'. A execução do programa começa e termina ali.
 //
 
 #include <iostream>
+#include <stack>
 
 using namespace std;
 
-void fibo(int num, int res);
-
 int main()
 {
-	cout << "Fibonacci\n";
-	cout << 1 << "\n";
-	fibo(1, 1);
-}
+    cout << "Stacks\n";
+    stack <string> cards;
+    cards.push("King Drinks");  // push adiciona elementeos 
+    cards.push("King of Sword");
+    cards.push("King of Gold");
+    cards.push("king of clubs");
+    
 
-void fibo(int num, int res) {
-	int cont = 100;
-	if (res < cont)
-	{
-		res = num + res;
-		num = res - num;
-		cout << res << "\n";
-		fibo(num, res);
-	}
-	else {
-		cout << res << "\nThe end\n";
-	}
-}
+    cout << "Tamanho da pilha: " << cards.size() << "\n";
 
+    cards.pop(); // pop retira o 1 elementos do topo que foi o ultimo adicionado na pilha
+
+    cout << "Tamanho da pilha: " << cards.size() << "\n";
+
+    cout << "card of top: " << cards.top();
+
+    return 0;
+}
 
 // Executar programa: Ctrl + F5 ou Menu Depurar > Iniciar Sem Depuração
 // Depurar programa: F5 ou menu Depurar > Iniciar Depuração

@@ -1,33 +1,22 @@
-// Fibonacci.cpp : Este arquivo contém a função 'main'. A execução do programa começa e termina ali.
+// Aula27.cpp : Este arquivo contém a função 'main'. A execução do programa começa e termina ali.
 //
 
 #include <iostream>
 
 using namespace std;
 
-void fibo(int num, int res);
 
 int main()
 {
-	cout << "Fibonacci\n";
-	cout << 1 << "\n";
-	fibo(1, 1);
-}
+	cout << "Enum\n";
 
-void fibo(int num, int res) {
-	int cont = 100;
-	if (res < cont)
-	{
-		res = num + res;
-		num = res - num;
-		cout << res << "\n";
-		fibo(num, res);
-	}
-	else {
-		cout << res << "\nThe end\n";
-	}
-}
+	enum armas {fuzil = 100, escopeta = 2, resolver= 8, rifle = 40};
+	armas armasSel;
+	armasSel = rifle;
+	cout << armasSel;
 
+	return 0;
+}
 
 // Executar programa: Ctrl + F5 ou Menu Depurar > Iniciar Sem Depuração
 // Depurar programa: F5 ou menu Depurar > Iniciar Depuração

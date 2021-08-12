@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -8,13 +9,22 @@ int main()
     int controller = 0;
     int controller2 = 0;
     int quant;
+    string pass;
+    string logi;
     string commodity[20][20];
-    /*login boss
+    //login boss
     string adm = "joao";
     string pass_adm = "102030";
 
-    login employed
-    cout << "=-=Login=-=";*/
+    //login employed
+    cout << "=-=Login=-=";
+
+    cout << "Login: \n";
+    cin >> logi;
+    cout << "Password: \n";
+    cin >> pass;
+    system("cls");
+
 
     cout << "\n =-= Register of Commodity =-=\n\n";
     

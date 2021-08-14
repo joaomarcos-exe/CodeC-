@@ -10,17 +10,35 @@ int main()
 {
     cout << "Stacks\n";
     stack <string> cards;
+
+    if (cards.empty()) { //you can use (cards.size() == 0)
+        cout << "There isen't a card here\n";
+    }
+    else {
+        cout << "There is a card here\n";
+    }
+
     cards.push("King Drinks");  // push adiciona elementeos 
     cards.push("King of Sword");
     cards.push("King of Gold");
     cards.push("king of clubs");
-    
 
-    cout << "Tamanho da pilha: " << cards.size() << "\n";
+    
+    
+    if (cards.empty()) {
+        cout << "There isen't a card here\n";
+    }
+    else {
+        cout << "There is a card here\n";
+    }
+
+    //remove all cards
+
+    cout << "Szie of stack: " << cards.size() << "\n";
 
     cards.pop(); // pop retira o 1 elementos do topo que foi o ultimo adicionado na pilha
 
-    cout << "Tamanho da pilha: " << cards.size() << "\n";
+    cout << "Size of stack: " << cards.size() << "\n";
 
     cout << "card of top: " << cards.top();
 

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string.h>
 
+
 using namespace std;
 
 
@@ -12,14 +13,19 @@ int main()
     char pass [20];
     char logi [20];
     int testPass;
+    int testPass2;
     string commodity[20][20];
     int testLog;
+    int testLog2;
 
     //login boss
     char adm [20] = "joao";
     char pass_adm [20] = "102030";
 
     //login employed
+    char empl[20] = "paulo";
+    char pass_empl[20] = "31292715";
+    
     cout << "\n=-=Login=-=\n";
 
     cout << "\nLogin: \n";
@@ -27,8 +33,14 @@ int main()
     cout << "\nPassword: \n";
     cin >> pass;
     system("cls");
+    
+    
     testLog = strcmp(logi, adm);
     testPass = strcmp(pass_adm, pass);
+    testLog2 = strcmp(logi, empl);
+    testPass2 = strcmp(pass, pass_empl);
+
+    
     if (testLog == 0 && testPass == 0) {
 
         cout << "\n =-= Register of Commodity =-=\n\n";
@@ -76,8 +88,7 @@ int main()
             }
             ++controller;
         }
-    }
-    else {
+    }else {
         cout << "Login failed";
     }
 

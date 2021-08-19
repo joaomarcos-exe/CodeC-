@@ -9,7 +9,23 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n";
+    queue <string> cards;
+
+    cards.push("Jack of Heart");  // push adiciona elementeos 
+    cards.push("Jack of Spades");
+    cards.push("Jack of Diamond");
+    cards.push("Jack of Clubss");
+
+    cout << "Size of queue: " << cards.size() << "\n";
+    cout << "First card: " << cards.front() << "\n";
+    cout << "last card: " << cards.back() << "\n";
+    
+    while (!cards.empty()) {
+        cout << "First card: " << cards.front() << "\n";
+        cards.pop();
+
+    }
+    
 }
 
 /*codes that i can use on queue
